@@ -39,7 +39,7 @@ public class Utility {
 		}
 		return false;
 	}
-	/*
+	/**
 	 * 解析和处理服务器返回的市级数据
 	 */
 	public synchronized static boolean handleCitiesReponse(CoolWeatherDB 
@@ -61,7 +61,7 @@ public class Utility {
 		}
 		return false;
 	}
-	/*
+	/**
 	 * 解析和处理服务器返回的县级数据
 	 */
 	public synchronized static boolean handleCountiesResponse(CoolWeatherDB 
@@ -106,7 +106,7 @@ public class Utility {
 	 */
 	public static void saveWeatherInfo(Context context, String cityName, 
 			String weatherCode, String temp1, String temp2, String weatherDesp, String publishTime){
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy年m月d日", Locale.CHINA);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy年M月d日", Locale.CHINA);
 		SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(context).edit();
 		editor.putBoolean("city_selected", true);
 		editor.putString("city_name", cityName);
